@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <title>Porfolio</title>
+        <link rel="stylesheet" href="portstyle.css">
+        <script src="https://kit.fontawesome.com/8971be7b30.js" crossorigin="anonymous"></script>
+    </head>
+        <body>
+            <div id="header">
+                <div class="container">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Me</a></li>
+                            <li><a href="#">Contact me</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header-text">
+                        <p>Web Designer</p>
+                        <h1>Hi, I'm <span>Prachiti</span><br>Pagar from Pune</h1>
+                    </div>
+                </div>
+            </div>
+            <!-------------------about---------------------->
+            <div id="about">
+                <div class="container">
+                    <div class="row">
+                        <div class="about-col-1">
+                            <img src="1.png">
+                        </div>
+                        <div class="about-col-2">
+                            <h1 class="sub-title">About Me</h1>
+                            <p>I am Prachiti student of Genba Sopanrao Moze College Of Engineering(IT).
+                                <br>Studying in third year.
+                                <br>I am a Web Developer with skills HTML, CSS, Javascript.
+                                <br>Also familiar with other languages like Java, SQL, Python.</p>
+                                <div class="tab-titles">
+                                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                                </div>
+                                <div class="tab-contents active-tab" id="skills">
+                                    <ul>
+                                        <li><span>UI/UX</span><br>Designing Web/App Interface</li>
+                                        <li><span>Web Development</span><br>Web App Development</li>
+                                        <li><span>App Development</span><br>Building Android/iOS apps</li>
+                                    </ul>
+                                </div>
+                                <div class="tab-contents" id="education">
+                                    <ul>
+                                        <li><span>2018</span><br>SSC</li>
+                                        <li><span>2020</span><br>HSC</li>
+                                        <li><span>2024</span><br>BE(IT)</li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------------contact---------------->
+            <div id="contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="contact-left">
+                            <h1 class="sub-title">Contact Me</h1>
+                            <p><i class="fa-solid fa-paper-plane"></i> contact@example.com</p>
+                            <p><i class="fa-solid fa-square-phone"></i> 0123456789</p>
+                            <div class="social-icons">
+                                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                            <a href="Prachiti Pagar Resume.pdf" download class="btn btn2">Download CV</a>
+                        </div>
+                        <div class="contact-right">
+                            <div class="form">
+                                <form>
+                                    <input type="text" name="Name" placeholder="Your Name" required>
+                                    <input type="email" name="email" placeholder="Your email" required>
+                                    <textarea name="Message" rows="7" placeholder="Your Message"></textarea>
+                                    <button type="submit" class="btn btn2">Submit</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var tablinks = document.getElementsByClassName("tab-links");
+                var tabcontents = document.getElementsByClassName("tab-contents");
+                function opentab(tabname){
+                    for (tablink of tablinks){
+                        tablink.classList.remove("active-link");
+                    }
+                    for (tabcontent of tabcontents){
+                        tabcontent.classList.remove("active-tab");
+                    }
+                    event.currentTarget.classList.add("active-link");
+                    document.getElementById(tabname).classList.add("active-tab");
+                }
+            </script>
+        </body>
+</html>
